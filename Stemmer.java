@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.PrintWriter;
 
 
-public class wtfIsEnglishAnalyzer{
+public class Stemmer{
   private static EnglishStemmer stemmer;
 
   public static void main(String[] args) throws IOException
