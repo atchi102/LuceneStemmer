@@ -15,6 +15,7 @@ public class wtfIsEnglishAnalyzer{
   public static void main(String[] args) throws IOException
   {
     stemmer = new EnglishStemmer();
+    //TODO add directory of text files here
     parseDir("/Users/t-abatch/Documents/plzwork");
   }
 
@@ -45,6 +46,7 @@ public class wtfIsEnglishAnalyzer{
       else if(contentName.endsWith(".txt"))
       {
         fileContents = stemWords(readFile(contentName));
+        //TODO: Add the directory of the output here (NOTE!!! this should be outside of the directory of the text files you are parsing through)
         File newFile = new File("/Users/t-abatch/Documents/output/" + contentName.substring(contentName.lastIndexOf('/'),contentName.indexOf(".txt")));
         PrintWriter writer = new PrintWriter(newFile);
         writer.println(stemWords(readFile(contentName)));
